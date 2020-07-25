@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>스라미</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="robots" content="noodp">
+
+    <meta name="title" content="스라미">
+    <meta name="description" content="스라미의 포폴이애욤">
+    <meta name="keywords" content="스라미, 프론트엔드, 프론트개발, 웹개발, 퍼블리셔, 퍼블리싱">
+    <meta name="author" content="스라미">
+    <meta name="content-language" content="ko">
+
+    <!-- FONTS : NANUMSQUARE -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    <!-- FONTAWESOME5 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script type="text/javascript" src="../assets/js/pages/minesweeper.js"></script>
+
+    <style>
+        main {
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .select {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 100px;
+        }
+        
+        .select input {
+            margin: 10px;
+        }
+        
+        .select input:first-child {
+            margin-left: 0;
+        }
+        
+        .select input:last-child {
+            display: block;
+            margin-right: 0;
+            padding: 0px 20px;
+            color: #333;
+            background: #e5e6e7;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all .2s ease;
+        }
+        
+        .select input:last-child:hover {
+            color: #fff;
+            background: #333;
+        }
+        
+        .select input:last-child:active {
+            color: #333;
+            background: #e5e6e7;
+        }
+        
+        table {
+            border: 3px solid #333;
+        }
+        
+        table tr,
+        table td {
+            border: 1px solid #333;
+            font-size: 10px;
+            padding: 4px 0px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- SKIP -->
+    <a href="#a" class="skip">본문 바로가기</a>
+    <a href="#a" class="skip">검색 바로가기</a>
+    <!-- // SKIP -->
+
+    <!-- HEADER -->
+    <header>
+        <div class="wrapper">
+            <h1><a href="../index.html">A</a></h1>
+            <div class="header__spot">
+                <a onclick="location.reload(true);"><i class="fas fa-redo"></i></a>
+                <a id="header__bookmark-btn" href="#a"><i class="fas fa-bookmark" title="북마크"></i></a>
+            </div>
+        </div>
+    </header>
+    <!-- // HEADER -->
+
+    <main>
+        <div class="select wrapper">
+            <input id="select__row" type="number" value="20" min="10" max="20" placeholder="row">
+            <input id="select__col" type="number" value="20" min="10" max="50" placeholder="col">
+            <input id="select__mine" type="number" value="5" min="1" max="10" placeholder="mine">
+            <input id="select__submit" type="button" value="시작">
+        </div>
+
+        <table class="wrapper">
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+</body>

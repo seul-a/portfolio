@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+/* 공통 */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    position: relative;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-top: 5px solid #333;
+    border-bottom: 1px solid #333;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+header h1 a {
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 65px;
+    padding: 1.25px 5px 0px 5px;
+    border: 3px solid #333;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+
+/* HEADER SPOT */
+
+header .header__spot {
+    position: absolute;
+    top: 1px;
+    right: -10px;
+}
+
+header .header__spot a {
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 22px;
+    line-height: 65px;
+    cursor: pointer;
+}
+
+
+/* // HEADER SPOT */
+
+
+/* HEADER SEARCH */
+
+header input[type="search"] {
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 92px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 40px;
+    color: #fff;
+    border: none;
+    text-indent: 10px;
+    background: #333;
+    z-index: -9999;
+    transition: all .3s ease-in-out;
+}
+
+header input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+header input[type="search"].active {
+    width: 60vw;
+    height: 40px;
+    z-index: 9;
+}
+
+header input[type="search"]:focus {
+    color: #333;
+    background: none;
+    border: 3px solid #333;
+}
+
+header input[type="search"]:focus::placeholder {
+    color: transparent;
+}
+
+header input[type="search"]:focus::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    display: block;
+    position: relative;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background: url("../images/common/baseline_cancel_black_18dp.png")no-repeat center/cover;
+    opacity: .8;
+}
+
+
+/* // HEADER SEARCH */
+
+
+/* // HEADER */
+
+
+/* MEDIA */
+
+
+/* HEADER */
+
+@media (max-width:768px) {
+    .wrapper {
+        width: 90vw;
+    }
+    /* HEADER */
+    header {
+        height: 61px;
+    }
+    header h1 a {
+        line-height: 55px;
+    }
+    /* HEADER SPOT */
+    header .header__spot {
+        top: 1px;
+    }
+    header .header__spot a {
+        line-height: 55px;
+        margin-left: 0px;
+    }
+    /* // HEADER SPOT */
+    header input[type="search"] {
+        right: 78px;
+        height: 36px;
+    }
+    header input[type="search"].active {
+        width: 50vw;
+    }
+    header input[type="search"]:focus::-webkit-search-cancel-button {
+        right: 10px;
+    }
+}
+
+
+/* // HEADER */

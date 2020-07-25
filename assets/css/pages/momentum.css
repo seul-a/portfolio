@@ -1,0 +1,150 @@
+/* MAIN */
+
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+main article {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 90%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+main article #clock {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+main article #inputName {
+    width: 50%;
+    height: 50px;
+    padding: 0;
+    text-indent: 0;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    background: rgba(248, 233, 233, 0.5);
+    transition: all .3s ease;
+    box-sizing: border-box;
+    z-index: -1;
+    opacity: 0;
+}
+
+main article #inputName:focus {
+    background: rgba(255, 255, 255, .5);
+    border: none;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 3px solid #333;
+}
+
+main article #inputName:focus::placeholder {
+    color: transparent;
+}
+
+main article #inputName::placeholder {
+    padding: 0;
+    text-indent: 0;
+    font-size: 20px;
+    text-align: center;
+    color: #666;
+}
+
+main article #showName {
+    display: inline-block;
+    width: 50%;
+    height: 50px;
+    padding: 0;
+    text-indent: 0;
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+    border-radius: none;
+    transition: all .3s ease;
+    line-height: 50px;
+    z-index: -1;
+    /*  */
+    position: relative;
+    top: -50px;
+    opacity: 0;
+}
+
+main article #inputName.active,
+main article #showName.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+
+/* BG */
+
+body {
+    background: powderblue;
+}
+
+.momentumBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: .5;
+    z-index: -9;
+    transition: all .5s ease-in;
+}
+
+
+/* WEATHER */
+
+.apiWeather {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+/* FOOTER */
+
+footer h3 {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    font-size: 14px;
+    font-weight: 900;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+}
+
+footer h3::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #333;
+    transition: width .4s ease;
+}
+
+footer h3:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    footer h3 {
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+    }
+    main article #inputName,
+    main article #showName {
+        width: 75%;
+    }
+}

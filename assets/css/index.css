@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/* MAIN */
+
+main section {
+    position: relative;
+    top: 100px;
+    left: calc(10vw - 10px);
+    width: calc(80vw + 20px);
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+main section article {
+    margin-bottom: 20px;
+}
+
+main section article .pages__img {
+    border: 3px solid #333;
+    margin: 0 10px;
+    width: auto;
+    height: 150px;
+}
+
+main section article:nth-child(1) .pages__img {
+    background: url("../images/index/pages/multiplication.jpg")no-repeat center / cover;
+}
+
+main section article:nth-child(2) .pages__img {
+    background: url("../images/index/pages/naver.jpg")no-repeat center / cover;
+}
+
+main section article:nth-child(3) .pages__img {
+    background: url("../images/index/pages/painter.jpg")no-repeat center / cover;
+}
+
+main section article:nth-child(4) .pages__img {
+    background: url("../images/index/pages/momentum.jpg")no-repeat center / cover;
+}
+
+main section article:nth-child(5) .pages__img {
+    background: url("../images/index/pages/wordgame.jpg")no-repeat center/ cover;
+}
+
+main section article:nth-child(6) .pages__img {
+    background: url("../images/index/pages/table.jpg")no-repeat center / cover;
+}
+
+
+/* DESC */
+
+main section article .pages__img .pages__desc {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    opacity: 0;
+    z-index: -1;
+    transition: all .3s ease-in;
+}
+
+main section article .pages__img:hover .pages__desc {
+    opacity: 1;
+    z-index: 9;
+}
+
+main section article .pages__img .pages__desc p {
+    display: block;
+    position: absolute;
+    top: 50%;
+    padding: 0 10px;
+    color: #fff;
+    text-align: center;
+    transform: translateY(-50%);
+    /* 여러 줄 글자 자르기 */
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.4;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+
+/* TITLE */
+
+main section article .pages__title {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px 0px;
+}
+
+main section article .pages__title h3 {
+    font-size: 16px;
+    font-weight: 900;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 3px;
+}
+
+main section article .pages__title span {
+    font-size: 11px;
+    border-radius: 2px;
+    padding: 2px 3px;
+    border: 1px solid #333;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+main section article .pages__title span:hover {
+    background: #eee;
+}
+
+
+/* MAIN */
+
+article.hide {
+    display: none;
+}

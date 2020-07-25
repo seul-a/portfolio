@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>스라미</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="robots" content="noodp">
+
+    <meta name="title" content="스라미">
+    <meta name="description" content="스라미의 포폴이애욤">
+    <meta name="keywords" content="스라미, 프론트엔드, 프론트개발, 웹개발, 퍼블리셔, 퍼블리싱">
+    <meta name="author" content="스라미">
+    <meta name="content-language" content="ko">
+
+    <!-- FONTS : NANUMSQUARE -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    <!-- FONTAWESOME5 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/pages/table.css">
+
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+</head>
+
+<body>
+    <!-- SKIP -->
+    <a href="#a" class="skip">본문 바로가기</a>
+    <!-- // SKIP -->
+
+    <!-- HEADER -->
+    <header>
+        <div class="wrapper">
+            <h1><a href="../index.html">A</a></h1>
+            <div class="header__spot">
+                <a onclick="location.reload(true);"><i class="fas fa-redo"></i></a>
+                <a id="header__bookmark-btn" href="#a"><i class="fas fa-bookmark" title="북마크"></i></a>
+            </div>
+        </div>
+    </header>
+    <!-- // HEADER -->
+
+    <main>
+        <!-- TABLE -->
+        <table class="table wrapper">
+            <caption>
+                <div class="hide">제목
+                    <div>요약글</div>
+                </div>
+            </caption>
+            <!-- 열 -->
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <!-- THEAD -->
+            <thead>
+                <tr>
+                    <th colspan="2" rowspan="2" class="bold-bottom">세목</th>
+                    <th colspan="2" rowspan="2" class="bold-bottom">구분</th>
+                    <th colspan="2">세율</th>
+                    <th rowspan="2" class="bold-bottom">비고</th>
+                </tr>
+                <tr>
+                    <th class="bold-bottom">비영업용</th>
+                    <th class="bold-bottom">영업용</th>
+                </tr>
+            </thead>
+
+            <!-- TBODY -->
+            <tbody>
+                <tr>
+                    <td rowspan="3" class="text-center bold-bottom">등록과정</td>
+                    <td rowspan="3" class="text-center bold-bottom">취득세</td>
+                    <td colspan="2" class="text-center">경자동차</td>
+                    <td>~18년까지 면제</td>
+                    <td rowspan="3" class="bold-bottom">4%</td>
+                    <td rowspan="3" class="bold-bottom">전기차 140만원 한도 감면(~21년)<br/> 하이브리드차 90만원 한도 감면
+                        <br/>(21년 5만원 / 22년 이후 일몰 예정)</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-center">승용자동차</td>
+                    <td>7%</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-center bold-bottom">그 밖의 자동차</td>
+                    <td class="bold-bottom">5%</td>
+                </tr>
+                <tr>
+                    <td rowspan="20" class="text-center">소유과정</td>
+                    <td rowspan="20" class="text-center">자동차세</td>
+                    <td rowspan="5" class="text-center">승용차</td>
+                    <td>2500cc초과</td>
+                    <td rowspan="3">200원/cc</td>
+                    <td>24원/cc</td>
+                    <td rowspan="5">전기차 : 100,000원/년<br/> 자동차세 교육세 : 자동차세의 30%</td>
+                </tr>
+                <tr>
+                    <td>2500cc이하</td>
+                    <td>19원/cc</td>
+                </tr>
+                <tr>
+                    <td>2000cc이하</td>
+                    <td>19원/cc</td>
+                </tr>
+                <tr>
+                    <td>1600cc이하</td>
+                    <td>140원/cc</td>
+                    <td>18원/cc</td>
+                </tr>
+                <tr>
+                    <td>1000cc이하</td>
+                    <td>80원/cc</td>
+                    <td>18원/cc</td>
+                </tr>
+                <tr>
+                    <td rowspan="7" class="text-center">화물차</td>
+                    <td>10000킬로그램 이하</td>
+                    <td>157,500원/년</td>
+                    <td>45,500원/년</td>
+                    <td rowspan="7">1만킬로그램 초과시<br/> <b>(1) 비영업용</b><br/> 적재적량 1만킬로그램이하의 세액에 1만킬로그램을 초과시 마다 + 3만원
+                        <br/>
+                        <b>(2)영업용</b><br/> 적재적량 1만킬로그램이하의 세액에 1만킬로그램을 초과시마 마다 + 1만원</td>
+                </tr>
+                <tr>
+                    <td>8000킬로그램 이하</td>
+                    <td>130,500원/년</td>
+                    <td>36,000원/년</td>
+                </tr>
+                <tr>
+                    <td>5000킬로그램 이하</td>
+                    <td>79,500원/년</td>
+                    <td>22,500원/년</td>
+                </tr>
+                <tr>
+                    <td>4000킬로그램 이하</td>
+                    <td>63,000원/년</td>
+                    <td>18,000원/년</td>
+                </tr>
+                <tr>
+                    <td>3000킬로그램 이하</td>
+                    <td>48,000원/년</td>
+                    <td>13,500원/년</td>
+                </tr>
+                <tr>
+                    <td>2000킬로그램 이하</td>
+                    <td>34,500원/년</td>
+                    <td>9,600원/년</td>
+                </tr>
+                <tr>
+                    <td>1000킬로그램 이하</td>
+                    <td>28,500원/년</td>
+                    <td>6,600원/년</td>
+                </tr>
+                <tr>
+                    <td rowspan="5" class="text-center">승합차</td>
+                    <td>고속버스</td>
+                    <td>-</td>
+                    <td>100,000원/년</td>
+                    <td rowspan="5"></td>
+                </tr>
+                <tr>
+                    <td>대형전세버스</td>
+                    <td>-</td>
+                    <td>70,000원/년</td>
+                </tr>
+                <tr>
+                    <td>소형전세버스</td>
+                    <td>-</td>
+                    <td>50,000원/년</td>
+                </tr>
+                <tr>
+                    <td>대형일반버스</td>
+                    <td>115,000원/년</td>
+                    <td>42,000원/년</td>
+                </tr>
+                <tr>
+                    <td>소형일반버스</td>
+                    <td>65,000원/년</td>
+                    <td>25,000원/년</td>
+                </tr>
+                <tr>
+                    <td rowspan="3" class="text-center">기타<br/>자동차</td>
+                    <td>대형특수자동차</td>
+                    <td>157,500원/년</td>
+                    <td>36,000원/년</td>
+                    <td rowspan="3"></td>
+                </tr>
+                <tr>
+                    <td>소형특수자동차</td>
+                    <td>58,500원/년</td>
+                    <td>13,500원/년</td>
+                </tr>
+                <tr>
+                    <td>삼륜이하소형자동차</td>
+                    <td>18,000원/년</td>
+                    <td>3,300원/년</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- // TABLE -->
+
+    </main>
+
+</body>

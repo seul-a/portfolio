@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>스라미</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="robots" content="noodp">
+
+    <meta name="title" content="스라미">
+    <meta name="description" content="스라미의 포폴이애욤">
+    <meta name="keywords" content="스라미, 프론트엔드, 프론트개발, 웹개발, 퍼블리셔, 퍼블리싱">
+    <meta name="author" content="스라미">
+    <meta name="content-language" content="ko">
+
+    <!-- FONTS : NANUMSQUARE -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    <!-- FONTAWESOME5 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/swiper.min.css">
+    <link rel="stylesheet" href="../assets/css/pages/naver.css">
+
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script type="text/javascript" src="../assets/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../assets/js/pages/naver.js"></script>
+</head>
+
+<body>
+    <!-- skip -->
+    <a href="#skip__search" class="skip">검색 바로가기</a>
+    <a href="#skip__login" class="skip">로그인 바로가기</a>
+    <a href="#skip__products" class="skip">상품 바로가기</a>
+    <a href="#skip__stand" class="skip">작업스탠드 바로가기</a>
+    <a href="#skip__recommend" class="skip">읽을만한 글 바로가기</a>
+    <!-- //skip -->
+
+
+    <!-- header settings -->
+    <div class="header__settings_bg">
+        <div class="wrapper">
+            <div class="header__settings__inner">
+                <h2 class="hide">페이지 세팅</h2>
+                <a id="addFavorite" herf="#a">즐겨찾기</a>
+                <a id="setHomepage" herf="#a">시작페이지로</a>
+            </div>
+        </div>
+    </div>
+    <!-- //header settings -->
+
+    <!-- header -->
+    <header class="__header">
+        <div class="wrapper">
+            <h1><a href="../index.html">A</a></h1>
+            <div class="header__spot">
+                <a onclick="location.reload(true);"><i class="fas fa-redo"></i></a>
+                <a id="header__bookmark-btn" href="#a"><i class="fas fa-bookmark" title="북마크"></i></a>
+            </div>
+        </div>
+    </header>
+    <!-- // header -->
+
+    <!-- floating  -->
+    <div class="floating__wrapper">
+        <!-- <button id="darkModeBtn" type="button" title="야간모드">DARK MODE</button> -->
+        <a onclick="window.scrollTo(0,0);" title="최상단으로 이동"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <!-- // floating  -->
+
+    <!-- header search -->
+    <div class="header__search__bg">
+        <div class="header__search__wrapper wrapper">
+            <h2 class="hide">검색</h2>
+            <input id="skip__search" type="search" title="검색" placeholder="검색어를 입력하세요" />
+            <a href="#a">검색</a>
+        </div>
+    </div>
+    <!-- // header search -->
+
+    <!-- aside -->
+    <aside class="wrapper">
+
+        <!-- aside -->
+        <div class="aside">
+
+            <!-- aside login -->
+            <div class="aside__login">
+                <h2 class="hide">로그인</h2>
+                <p>더 안전하고 편리하게 이용하세요</p>
+                <h2><a id="skip__login" href="#a" class="aside__login-btn"><span>Title</span>로그인</a></h2>
+                <a href="#a">비밀번호 찾기</a>
+                <a href="#a">회원가입</a>
+            </div>
+            <!-- // aside login -->
+
+            <!-- aside login member -->
+            <div class="aside__login aside__login__member">
+                <div class="aside__login__member__inner">
+                    <h2><b>스라미</b>님 <span>내정보<i class="fas fa-cog"></i></span>
+                    </h2>
+                    <p>21202022.kwonseula@gmail.com</p>
+                    <a href="#a">메일<b>1</b></a>
+                    <a href="#a">쪽지<b>1</b></a>
+                    <button class="aside__logout-btn" title="로그아웃"><i class="fas fa-sign-out-alt"></i></button>
+                </div>
+                <div title="프로필사진"></div>
+                <nav>
+                    <ul>
+                        <li><a href="#a">알림</a></li>
+                        <li><a href="#a">MY구독</a></li>
+                        <li><a href="#a">메일</a></li>
+                        <li><a href="#a">카페</a></li>
+                        <li><a href="#a">블로그</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- // aside login member -->
+
+
+            <!-- aside line -->
+            <div class="aside__line__wrapper">
+                <h2 class="hide">뉴스라인</h2>
+                <div class="swiper-container aside__line">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><span class="common__pointColor-bg">badge</span><a href="#a">Slide 1</a>
+                        </div>
+                        <div class="swiper-slide"><span>badge</span><a href="#a">Slide 2</a></div>
+                    </div>
+                    <!-- btns -->
+                    <div class="aside__lineBtn__wrapper">
+                        <div class="swiper-button-next aside__lineBtn">이전뉴스</div>
+                        <div class="swiper-button-prev aside__lineBtn">다음뉴스</div>
+                    </div>
+                </div>
+            </div>
+            <!-- // aside line -->
+
+
+            <!-- aside da -->
+            <div class="aside__da__bg">
+                <h2 class="hide">광고</h2>
+                <div class="swiper-container aside__da">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide aisde__da__img-01">
+                            <a href="#a">
+                                <h3>DISPLAY!
+                                    <p>광고를 진행해주세요</p>
+                                </h3>
+                                <div></div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide aisde__da__img-02">
+
+                            <a href="#a">
+
+                                <h3>마케팅의 시작
+                                    <p>합리적인 DA 광고</p>
+                                </h3>
+                                <div></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- // aside da -->
+
+            <!-- aside keywords -->
+            <div class="aside__keywords">
+                <h2 class="hide">상품 키워드</h2>
+                <a href="#a"><b class="common__pointColor-txt">키워드1</b></a>
+                <a href="#a">키워드2</a>
+                <a href="#a"><b>키워드3</b></a>
+                <a href="#a"><b>키워드4</b></a>
+                <a href="#a">키워드5</a>
+                <a href="#a">키워드6</a>
+                <a href="#a">키워드7</a>
+                <a href="#a"><b class="common__pointColor-txt">키워드8</b></a>
+                <a href="#a">키워드9</a>
+                <a href="#a">키워드10</a>
+            </div>
+
+            <!-- // aside keywords -->
+
+            <!-- aside pdt -->
+            <div id="skip__products" class="aside__pdt__bg">
+                <div class="swiper-container aside__pdt">
+                    <h2 id="skip__products" class="common__title__h2">꼼젠삐 기획전</h2>
+                    <div class="swiper-wrapper">
+                        <!-- grid1 -->
+                        <div class="swiper-slide aside__pdt-grid-01">
+                            <div class="aside__pdt__grid">
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- grid2 -->
+                        <div class="swiper-slide aside__pdt-grid-02">
+                            <div class="aside__pdt__grid">
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#a">
+                                        <div class="common__zoomin-box">
+                                            <div class="common__zoomin-img"></div>
+                                        </div>
+                                        <span>(1+1 특가할인) 꼼젠삐 폭풍애교 1초 관람</span>
+                                        <p>32,500원</p>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- pagination -->
+                    <div class="swiper-pagination pdt__Pagination"></div>
+                    <!-- btns -->
+                    <div class="pdt__Btn-top__wrapper">
+                        <div class="swiper-button-next pdt__Btn pdt__Btn-top"></div>
+                        <div class="swiper-button-prev pdt__Btn pdt__Btn-top"></div>
+                    </div>
+
+                    <div class="swiper-button-next pdt__Btn pdt__Btn-bottom">이전목록</div>
+                    <div class="swiper-button-prev pdt__Btn pdt__Btn-bottom">다음목록</div>
+
+                </div>
+            </div>
+            <!-- // aside pdt -->
+
+            <!-- aisde board -->
+            <div class="aside__board__wrapper">
+                <div class="swiper-container aside__board">
+                    <h2 class="common__title__h2">반갑다! 쇼핑뉴스</h2>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul>
+                                <li><a href="#a"><span>서울샵</span>중소기업 우수 추천상품 모음전</a></li>
+                                <li><a href="#a"><span>르마스크</span>데일리백 모음전 전가방 최대 38% OFF</a></li>
+                                <li><a href="#a"><span>엔노브</span>인기상품BEST 여름팔찌 30% 할인</a></li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul>
+                                <li><a href="#a"><span>농촌진흥청</span>힘내라대한민국 농특산물 뭐먹지?</a></li>
+                                <li><a href="#a"><span>다채몰</span>힘내라 대구 소상공인 힘내라</a></li>
+                                <li><a href="#a"><span>순수연구소</span>천연 폼클렌징 1+1 EVENT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- btns -->
+                    <div class="board__Btn__wrapper">
+                        <div class="swiper-button-next board__Btn">이전목록</div>
+                        <div class="swiper-button-prev board__Btn">다음목록</div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- // aside board -->
+        </div>
+        <!-- // aside -->
+    </aside>
+    <!-- // aside -->
+
+
+
+    <!-- idx -->
+    <section class="idx__bg wrapper">
+        <!-- idx -->
+        <div class="idx">
+
+            <!-- idx da -->
+            <div class="idx__da">
+                <h2 class="hide">디스플레이 광고</h2>
+                <div class="idx__da__dim">
+                    <div>
+                        <div class="idx__da-inner">
+                            <p><i class="fas fa-stopwatch"></i>가성비 좋은 DA</p>
+                            <h2>다음 DA 광고까지</h2>
+                            <!-- idx da countDown -->
+                            <div id="idx__da-countdown__inner">
+                                <span class="timeNumb days">00
+                                  </span>
+                                <span class="timeNumb hours">00</span>
+                                <span class="timeNumb minutes">00</span>
+                                <span class="timeNumb seconds">00</span>
+                                <span class="timeRef timeRefDays">Days</span>
+                                <span class="timeRef timeRefHours">Hours</span>
+                                <span class="timeRef timeRefMinutes">Minutes</span>
+                                <span class="timeRef timeRefSeconds">Seconds</span>
+                            </div>
+                        </div>
+                        <span id="endtitle"></span>
+                    </div>
+                    <!-- // idx da countDown -->
+                </div>
+            </div>
+            <!-- // idx da -->
+
+
+            <!-- idx line -->
+            <div class="idx__line__bg">
+                <h2 class="common__title__h2">최신뉴스<span></span></h2>
+                <div class="swiper-container idx__line">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#a">Slide 1</a></div>
+                        <div class="swiper-slide"><a href="#a">Slide 2</a></div>
+                    </div>
+                </div>
+                <div class="idx__line__submenu">
+                    <h3><a href="#a">연예</a></h3>
+                    <h3><a href="#a">스포츠</a></h3>
+                    <h3><a href="#a">경제</a></h3>
+                </div>
+            </div>
+            <!-- // idx line -->
+
+            <!-- idx standbox -->
+
+            <section class="idx__standbox">
+                <div class="idx__standbox-title">
+                    <h2 id="skip__stand" class="common__title__h2">작업스탠드</h2>
+                    <div class="idx__standbox-mode">
+                        <h2 class="hide">목록스타일</h2>
+                        <i id="idx__standbox__grid-btn" class="fas fa-border-all active" title="모아보기"></i>
+                        <i id="idx__standbox__list-btn" class="fas fa-bars" title="주제별 보기"></i>
+                    </div>
+                </div>
+
+                <!-- idx standbox grid -->
+                <article class="idx__standbox__grid active">
+                    <!-- grid -->
+                    <!-- 1st -->
+                    <div>
+                        1-1
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">내용보기</a>
+                          </span>
+                    </div>
+                    <div>
+                        1-2
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">내용보기</a>
+                          </span>
+                    </div>
+                    <div>
+                        1-3
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">내용보기</a>
+                          </span>
+                    </div>
+                    <div>
+                        1-4
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">자세히</a>
+                          </span>
+                    </div>
+                    <div>
+                        1-5
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">자세히</a>
+                          </span>
+                    </div>
+                    <div>
+                        1-6
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">자세히</a>
+                          </span>
+                    </div>
+
+                    <!-- 2nd -->
+                    <div>
+                        2-1
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">내용보기</a>
+                          </span>
+                    </div>
+                    <div>
+                        2-2
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">내용보기</a>
+                          </span>
+                    </div>
+                    <div>
+                        2-3
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">내용보기</a>
+                          </span>
+                    </div>
+                    <div>
+                        2-4
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">자세히</a>
+                          </span>
+                    </div>
+                    <div>
+                        2-5
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">자세히</a>
+                          </span>
+                    </div>
+                    <div>
+                        2-6
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">자세히</a>
+                          </span>
+                    </div>
+
+                    <!-- 3rd -->
+                    <div>
+                        3-1
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">내용보기</a>
+                          </span>
+                    </div>
+                    <div>
+                        3-2
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">내용보기</a>
+                          </span>
+                    </div>
+                    <div>
+                        3-3
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">내용보기</a>
+                          </span>
+                    </div>
+                    <div>
+                        3-4
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">자세히</a>
+                          </span>
+                    </div>
+                    <div>
+                        3-5
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">자세히</a>
+                          </span>
+                    </div>
+                    <div>
+                        3-6
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">자세히</a>
+                          </span>
+                    </div>
+
+                    <!-- 4th -->
+                    <div>
+                        4-1
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">내용보기</a>
+                          </span>
+                    </div>
+                    <div>
+                        4-2
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">내용보기</a>
+                          </span>
+                    </div>
+                    <div>
+                        4-3
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">내용보기</a>
+                          </span>
+                    </div>
+                    <div>
+                        4-4
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">자세히</a>
+                          </span>
+                    </div>
+                    <div>
+                        4-5
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">자세히</a>
+                          </span>
+                    </div>
+                    <div>
+                        4-6
+                        <span>
+                              <a href="#a">구독</a>
+                              <a href="#a">자세히</a>
+                          </span>
+                    </div>
+
+                    <!-- lines -->
+                </article>
+
+                <!-- // idx standbox grid -->
+
+
+                <!-- idx standbox list -->
+                <div class="idx__standbox__list">
+                    <h2 class="hide">주제별 작업스탠드</h2>
+                    <!-- idx standbox list tab -->
+                    <article class="idx__standbox__list__tab">
+                        <ul>
+                            <li><a class="idx__standbox__list__tab-menu active" href="#a">종합</a></li>
+                            <li><a class="idx__standbox__list__tab-menu" href="#a">방송</a></li>
+                            <li><a class="idx__standbox__list__tab-menu" href="#a">IT</a></li>
+                            <li><a class="idx__standbox__list__tab-menu" href="#a">영자</a></li>
+                            <li><a class="idx__standbox__list__tab-menu" href="#a">연예</a></li>
+                            <li><a class="idx__standbox__list__tab-menu" href="#a">전문</a></li>
+                            <li><a class="idx__standbox__list__tab-menu" href="#a">지역</a></li>
+                        </ul>
+                    </article>
+                    <!-- // idx standbox list tab -->
+
+                    <!-- idx standbox list inner -->
+                    <!-- 1st -->
+                    <article class="idx__standbox__list__inner active">
+                        <h2>스라미뉴스
+                            <p>1111.00.00 00:00 편집</p>
+                            <button>자세히</button>
+                        </h2>
+                        <div>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img">이미지</div>
+                                </div>
+                                <h3>제넥신, 국내최초 코로나 백신 인체 투여...파인애플도 응원해!</h3>
+                            </a>
+                        </div>
+
+                        <ul>
+                            <li>
+                                <a href="#a">유지관리 업무라더니, 등급제로 영업압박 내몰아</a>
+                                <a href="#a">라푸마, 빈폴스포츠... 패션업계 '메가브랜드' 잇단 철수 이유는?</a>
+                                <a href="#a">현대차, 저신용 자동차 부품사 대규모 금융지원 나서</a>
+                                <a href="#a">롯데칠성음료, 서초동 부지 개발 재료에도 주가 '도루묵'</a>
+                                <a href="#a">유지관리 업무라더니, 등급제로 영업압박 내몰아</a>
+                                <a href="#a">라푸마, 빈폴스포츠... 패션업계 '메가브랜드' 잇단 철수 이유는?</a>
+                                <a href="#a">현대차, 저신용 자동차 부품사 대규모 금융지원 나서</a>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <!-- 2nd -->
+                    <article class="idx__standbox__list__inner">
+                        <h2>스라미뉴스
+                            <p>2222.00.00 00:00 편집</p>
+                            <button>자세히</button>
+                        </h2>
+                        <div>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img">이미지</div>
+                                </div>
+                                <h3>제넥신, 국내최초 코로나 백신 인체 투여...파인애플도 응원해!</h3>
+                            </a>
+                        </div>
+
+                        <ul>
+                            <li>
+                                <a href="#a">유지관리 업무라더니, 등급제로 영업압박 내몰아</a>
+                                <a href="#a">라푸마, 빈폴스포츠... 패션업계 '메가브랜드' 잇단 철수 이유는?</a>
+                                <a href="#a">현대차, 저신용 자동차 부품사 대규모 금융지원 나서</a>
+                                <a href="#a">롯데칠성음료, 서초동 부지 개발 재료에도 주가 '도루묵'</a>
+                                <a href="#a">유지관리 업무라더니, 등급제로 영업압박 내몰아</a>
+                                <a href="#a">라푸마, 빈폴스포츠... 패션업계 '메가브랜드' 잇단 철수 이유는?</a>
+                                <a href="#a">현대차, 저신용 자동차 부품사 대규모 금융지원 나서</a>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <!-- 3rd -->
+                    <article class="idx__standbox__list__inner">
+                        <h2>스라미뉴스
+                            <p>3333.00.00 00:00 편집</p>
+                            <button>자세히</button>
+                        </h2>
+                        <div>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img">이미지</div>
+                                </div>
+                                <h3>제넥신, 국내최초 코로나 백신 인체 투여...파인애플도 응원해!</h3>
+                            </a>
+                        </div>
+
+                        <ul>
+                            <li>
+                                <a href="#a">유지관리 업무라더니, 등급제로 영업압박 내몰아</a>
+                                <a href="#a">라푸마, 빈폴스포츠... 패션업계 '메가브랜드' 잇단 철수 이유는?</a>
+                                <a href="#a">현대차, 저신용 자동차 부품사 대규모 금융지원 나서</a>
+                                <a href="#a">롯데칠성음료, 서초동 부지 개발 재료에도 주가 '도루묵'</a>
+                                <a href="#a">유지관리 업무라더니, 등급제로 영업압박 내몰아</a>
+                                <a href="#a">라푸마, 빈폴스포츠... 패션업계 '메가브랜드' 잇단 철수 이유는?</a>
+                                <a href="#a">현대차, 저신용 자동차 부품사 대규모 금융지원 나서</a>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <!-- 4th -->
+                    <article class="idx__standbox__list__inner">
+                        <h2>스라미뉴스
+                            <p>4444.00.00 00:00 편집</p>
+                            <button>자세히</button>
+                        </h2>
+                        <div>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img">이미지</div>
+                                </div>
+                                <h3>제넥신, 국내최초 코로나 백신 인체 투여...파인애플도 응원해!</h3>
+                            </a>
+                        </div>
+
+                        <ul>
+                            <li>
+                                <a href="#a">유지관리 업무라더니, 등급제로 영업압박 내몰아</a>
+                                <a href="#a">라푸마, 빈폴스포츠... 패션업계 '메가브랜드' 잇단 철수 이유는?</a>
+                                <a href="#a">현대차, 저신용 자동차 부품사 대규모 금융지원 나서</a>
+                                <a href="#a">롯데칠성음료, 서초동 부지 개발 재료에도 주가 '도루묵'</a>
+                                <a href="#a">유지관리 업무라더니, 등급제로 영업압박 내몰아</a>
+                                <a href="#a">라푸마, 빈폴스포츠... 패션업계 '메가브랜드' 잇단 철수 이유는?</a>
+                                <a href="#a">현대차, 저신용 자동차 부품사 대규모 금융지원 나서</a>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <!-- 5th -->
+                    <article class="idx__standbox__list__inner">
+                        <h2>스라미뉴스
+                            <p>5555.00.00 00:00 편집</p>
+                            <button>자세히</button>
+                        </h2>
+                        <div>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img">이미지</div>
+                                </div>
+                                <h3>제넥신, 국내최초 코로나 백신 인체 투여...파인애플도 응원해!</h3>
+                            </a>
+                        </div>
+
+                        <ul>
+                            <li>
+                                <a href="#a">유지관리 업무라더니, 등급제로 영업압박 내몰아</a>
+                                <a href="#a">라푸마, 빈폴스포츠... 패션업계 '메가브랜드' 잇단 철수 이유는?</a>
+                                <a href="#a">현대차, 저신용 자동차 부품사 대규모 금융지원 나서</a>
+                                <a href="#a">롯데칠성음료, 서초동 부지 개발 재료에도 주가 '도루묵'</a>
+                                <a href="#a">유지관리 업무라더니, 등급제로 영업압박 내몰아</a>
+                                <a href="#a">라푸마, 빈폴스포츠... 패션업계 '메가브랜드' 잇단 철수 이유는?</a>
+                                <a href="#a">현대차, 저신용 자동차 부품사 대규모 금융지원 나서</a>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <!-- 6th -->
+                    <article class="idx__standbox__list__inner">
+                        <h2>스라미뉴스
+                            <p>6666.00.00 00:00 편집</p>
+                            <button>자세히</button>
+                        </h2>
+                        <div>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img">이미지</div>
+                                </div>
+                                <h3>제넥신, 국내최초 코로나 백신 인체 투여...파인애플도 응원해!</h3>
+                            </a>
+                        </div>
+
+                        <ul>
+                            <li>
+                                <a href="#a">유지관리 업무라더니, 등급제로 영업압박 내몰아</a>
+                                <a href="#a">라푸마, 빈폴스포츠... 패션업계 '메가브랜드' 잇단 철수 이유는?</a>
+                                <a href="#a">현대차, 저신용 자동차 부품사 대규모 금융지원 나서</a>
+                                <a href="#a">롯데칠성음료, 서초동 부지 개발 재료에도 주가 '도루묵'</a>
+                                <a href="#a">유지관리 업무라더니, 등급제로 영업압박 내몰아</a>
+                                <a href="#a">라푸마, 빈폴스포츠... 패션업계 '메가브랜드' 잇단 철수 이유는?</a>
+                                <a href="#a">현대차, 저신용 자동차 부품사 대규모 금융지원 나서</a>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <!-- 7th -->
+                    <article class="idx__standbox__list__inner">
+                        <h2>스라미뉴스
+                            <p>7777.00.00 00:00 편집</p>
+                            <button>자세히</button>
+                        </h2>
+                        <div>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img">이미지</div>
+                                </div>
+                                <h3>제넥신, 국내최초 코로나 백신 인체 투여...파인애플도 응원해!</h3>
+                            </a>
+                        </div>
+
+                        <ul>
+                            <li>
+                                <a href="#a">유지관리 업무라더니, 등급제로 영업압박 내몰아</a>
+                                <a href="#a">라푸마, 빈폴스포츠... 패션업계 '메가브랜드' 잇단 철수 이유는?</a>
+                                <a href="#a">현대차, 저신용 자동차 부품사 대규모 금융지원 나서</a>
+                                <a href="#a">롯데칠성음료, 서초동 부지 개발 재료에도 주가 '도루묵'</a>
+                                <a href="#a">유지관리 업무라더니, 등급제로 영업압박 내몰아</a>
+                                <a href="#a">라푸마, 빈폴스포츠... 패션업계 '메가브랜드' 잇단 철수 이유는?</a>
+                                <a href="#a">현대차, 저신용 자동차 부품사 대규모 금융지원 나서</a>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <!-- // idx standbox list inner -->
+                </div>
+                <!-- // idx standbox list -->
+
+            </section>
+            <!-- // idx standbox -->
+
+
+            <!-- idx recommend -->
+            <section class="idx__recommend">
+                <div class="idx__recommend-title">
+                    <h2 id="skip__recommend" class="common__title__h2">읽을만한 글</h2>
+                    <span>주제별로 분류된 다양한 글 모음</span>
+                    <span><b>2,126</b>개의 글</span>
+                </div>
+                <!-- idx recommend tab -->
+                <article class="idx__recommend__tab">
+                    <ul>
+                        <li><a class="idx__recommend__tab-menu active" href="#a">동물</a></li>
+                        <li><a class="idx__recommend__tab-menu" href="#a">동물</a></li>
+                        <li><a class="idx__recommend__tab-menu" href="#a">동물</a></li>
+                        <li><a class="idx__recommend__tab-menu" href="#a">동물</a></li>
+                        <li><a class="idx__recommend__tab-menu" href="#a">동물</a></li>
+                        <li><a class="idx__recommend__tab-menu" href="#a">동물</a></li>
+                        <li><a class="idx__recommend__tab-menu" href="#a">동물</a></li>
+                    </ul>
+                </article>
+                <!-- //idx recommend tab -->
+
+                <!-- idx recommend inner  -->
+                <!-- 1st -->
+                <div class="idx__recommend__inner idx__recommend__inner-01 active">
+                    <article>
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p><b>[STYLE TV]</b> 우리 같이 쇼핑해요!</p>
+                        <h3>제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!!</h3>
+                        <span>화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진 '꾸안꾸' 데일리 룩을 완성해보자! 화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진
+                              '꾸안꾸' 데일리 룩을 완성해보자! </span>
+                    </article>
+
+                    <article>
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p><b>[STYLE TV]</b> 우리 같이 쇼핑해요!</p>
+                        <h3>제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!!</h3>
+                        <span>화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진 '꾸안꾸' 데일리 룩을 완성해보자! 화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진
+                              '꾸안꾸' 데일리 룩을 완성해보자! </span>
+                    </article>
+
+                    <ul>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙<span>NEW</span></span>
+                                    <h3>먼지 많은 창틀, 2가지 청소 방법</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙</span>
+                                    <h3>먼지 많은 창틀, 2가지 청소 방법</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요? 요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙<span
+                                              class="common__pointColor-bg">HOT</span></span>
+                                    <h3>먼지 많은 창틀, 2가지 청소 방법</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요? 요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 2nd -->
+                <div class="idx__recommend__inner idx__recommend__inner-02">
+                    <article>
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p><b>[STYLE TV]</b> 우리 같이 쇼핑해요!</p>
+                        <h3>제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!!</h3>
+                        <span>화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진 '꾸안꾸' 데일리 룩을 완성해보자! 화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진
+                              '꾸안꾸' 데일리 룩을 완성해보자! </span>
+                    </article>
+
+                    <article>
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p><b>[STYLE TV]</b> 우리 같이 쇼핑해요!</p>
+                        <h3>제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!!</h3>
+                        <span>화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진 '꾸안꾸' 데일리 룩을 완성해보자! 화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진
+                              '꾸안꾸' 데일리 룩을 완성해보자! </span>
+                    </article>
+                    <ul>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙<span>NEW</span></span>
+                                    <h3>먼지 많은 창틀, 2가지 청소 방법</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙<span
+                                              class="contents-list-txt-hot">HOT</span></span>
+                                    <h3>DDDDDD</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요? 요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙</span>
+                                    <h3>에휴우!!</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요? 요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- 3rd -->
+                <div class="idx__recommend__inner idx__recommend__inner-03">
+                    <article>
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p><b>[STYLE TV]</b> 우리 같이 쇼핑해요!</p>
+                        <h3>제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!!</h3>
+                        <span>화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진 '꾸안꾸' 데일리 룩을 완성해보자! 화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진
+                              '꾸안꾸' 데일리 룩을 완성해보자! </span>
+                    </article>
+
+                    <article>
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p><b>[STYLE TV]</b> 우리 같이 쇼핑해요!</p>
+                        <h3>제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!!</h3>
+                        <span>화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진 '꾸안꾸' 데일리 룩을 완성해보자! 화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진
+                              '꾸안꾸' 데일리 룩을 완성해보자! </span>
+                    </article>
+                    <ul>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙<span
+                                              class="contents-list-txt-hot">HOT</span>
+                                    <span>NEW</span></span>
+                                    <h3>두두두두두두두</h3>
+                                    <p>두두두두두두이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙<span
+                                              class="contents-list-txt-hot">HOT</span></span>
+                                    <h3>DDDDDD</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요? 요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙</span>
+                                    <h3>에휴우!!</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요? 요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 4th -->
+                <div class="idx__recommend__inner idx__recommend__inner-04">
+                    <article>
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p><b>[STYLE TV]</b> 우리 같이 쇼핑해요!</p>
+                        <h3>제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!!</h3>
+                        <span>화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진 '꾸안꾸' 데일리 룩을 완성해보자! 화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진
+                              '꾸안꾸' 데일리 룩을 완성해보자! </span>
+                    </article>
+
+                    <article>
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p><b>[STYLE TV]</b> 우리 같이 쇼핑해요!</p>
+                        <h3>제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!!</h3>
+                        <span>화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진 '꾸안꾸' 데일리 룩을 완성해보자! 화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진
+                              '꾸안꾸' 데일리 룩을 완성해보자! </span>
+                    </article>
+                    <ul>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙</span>
+                                    <h3>두두두두두두두</h3>
+                                    <p>두두두두두두이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙</span>
+                                    <h3>DDDDDD</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요? 요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙</span>
+                                    <h3>에휴우!!</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요? 요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 5th -->
+                <div class="idx__recommend__inner idx__recommend__inner-05">
+                    <article>
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p><b>[STYLE TV]</b> 우리 같이 쇼핑해요!</p>
+                        <h3>제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!!</h3>
+                        <span>화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진 '꾸안꾸' 데일리 룩을 완성해보자! 화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진
+                              '꾸안꾸' 데일리 룩을 완성해보자! </span>
+                    </article>
+
+                    <article>
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p><b>[STYLE TV]</b> 우리 같이 쇼핑해요!</p>
+                        <h3>제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!!</h3>
+                        <span>화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진 '꾸안꾸' 데일리 룩을 완성해보자! 화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진
+                              '꾸안꾸' 데일리 룩을 완성해보자! </span>
+                    </article>
+                    <ul>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙<span>NEW</span></span>
+                                    <h3>두두두두두두두</h3>
+                                    <p>두두두두두두이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙</span>
+                                    <h3>DDDDDD</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요? 요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙<span
+                                              class="contents-list-txt-hot">HOT</span></span>
+                                    <h3>에휴우!!</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요? 요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- 6th -->
+                <div class="idx__recommend__inner idx__recommend__inner-06">
+                    <article>
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p><b>[STYLE TV]</b> 우리 같이 쇼핑해요!</p>
+                        <h3>제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!!</h3>
+                        <span>화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진 '꾸안꾸' 데일리 룩을 완성해보자! 화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진
+                              '꾸안꾸' 데일리 룩을 완성해보자! </span>
+                    </article>
+
+                    <article>
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p><b>[STYLE TV]</b> 우리 같이 쇼핑해요!</p>
+                        <h3>제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!!</h3>
+                        <span>화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진 '꾸안꾸' 데일리 룩을 완성해보자! 화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진
+                              '꾸안꾸' 데일리 룩을 완성해보자! </span>
+                    </article>
+                    <ul>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙</span>
+                                    <h3>두두두두두두두</h3>
+                                    <p>두두두두두두이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙</span>
+                                    <h3>에휴우!!</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요? 요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙</span>
+                                    <h3>에휴우!!</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요? 요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- 7th -->
+                <div class="idx__recommend__inner idx__recommend__inner-07">
+                    <article>
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p><b>[STYLE TV]</b> 우리 같이 쇼핑해요!</p>
+                        <h3>제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!!</h3>
+                        <span>화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진 '꾸안꾸' 데일리 룩을 완성해보자! 화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진
+                              '꾸안꾸' 데일리 룩을 완성해보자! </span>
+                    </article>
+
+                    <article>
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p><b>[STYLE TV]</b> 우리 같이 쇼핑해요!</p>
+                        <h3>제목영역입니당 매우 놀랍게도 제목 영역입니다요!! 제목영역입니당 매우 놀랍게도 제목 영역입니다요!!</h3>
+                        <span>화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진 '꾸안꾸' 데일리 룩을 완성해보자! 화사한 컬러의 가디건부터 여성스러운 디자인과 라인까지, 멋진
+                              '꾸안꾸' 데일리 룩을 완성해보자! </span>
+                    </article>
+                    <ul>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙<span>NEW</span><span class="contents-list-txt-hot">HOT</span></span>
+                                    <h3>두두두두두두두</h3>
+                                    <p>두두두두두두이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙<span>NEW</span></span>
+                                    <h3>DDDDDD</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요? 요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#a">
+                                <div class="common__zoomin-box">
+                                    <div class="common__zoomin-img"></div>
+                                </div>
+                                <div class="recommend-contents-list-txt"><span>리빙</span>
+                                    <h3>에휴우!!</h3>
+                                    <p>요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요? 요즘 창문열기 겁나시죠? 미세먼지는 적어졌지만 계절이 계절인만큼 창문열기가 참 무서워졌는데요! 창문을 열어놓지 않아도 창틀에 먼지가 쌓여갈 수 밖에 없는데 제가 방법을 하나 알아냈거든요?
+                                    </p>
+                                    <dd>
+                                        <p>1</p>
+                                        <p>2</p>
+                                        <p>2020년 8월 22일</p>
+                                    </dd>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- // idx recommend inner -->
+            </section>
+            <!-- // idx recommend -->
+        </div>
+        <!-- // idx -->
+    </section>
+    <!-- // idx -->
+
+    <!-- footer -->
+    <footer>
+        <div class="footer__bg">
+            <!-- footer visual -->
+            <section class="footer__visual">
+                <h2 class="hide">스라미응원</h2>
+                <div>
+                    <a href="#a">
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p>뮤지션리그X온스테이지</p>
+                        <h3>제 꿈을 응원해주세요</h3>
+                        <span>이상하고 아름다운 음악, 싱어송라이터 김뜻돌 이상하고 아름다운 음악, 이상하고 아름다운 음악, 싱어송라이터 김뜻돌 이상하고 아름다운 음악,싱어송라이터
+                              김뜻돌</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="#a">
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p>뮤지션리그X온스테이지</p>
+                        <h3>제 꿈을 응원해주세요</h3>
+                        <span>이상하고 아름다운 음악, 싱어송라이터 김뜻돌 이상하고 아름다운 음악, 이상하고 아름다운 음악, 싱어송라이터 김뜻돌 이상하고 아름다운 음악,싱어송라이터
+                              김뜻돌</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="#a">
+                        <div class="common__zoomin-box">
+                            <div class="common__zoomin-img">이미지</div>
+                        </div>
+                        <p>뮤지션리그X온스테이지</p>
+                        <h3>제 꿈을 응원해주세요</h3>
+                        <span>이상하고 아름다운 음악, 싱어송라이터 김뜻돌 이상하고 아름다운 음악, 이상하고 아름다운 음악, 싱어송라이터 김뜻돌 이상하고 아름다운 음악,싱어송라이터
+                              김뜻돌</span>
+                    </a>
+                </div>
+            </section>
+            <!-- // footer visual -->
+
+            <!-- footer sitemap -->
+            <section class="footer__sitemap">
+                <h2 class="hide">사이트맵</h2>
+                <div>
+                    <span>Creators</span>
+                    <a href="#a">크리에이터</a>
+                    <a href="#a">스몰비즈니스</a>
+                </div>
+                <div>
+                    <span>Partners</span>
+                    <a href="#a">비즈니스</a>
+                    <a href="#a">스토어개설</a>
+                    <a href="#a">지역업체</a>
+                </div>
+                <div>
+                    <span>Developers</span>
+                    <a href="#a">개발자센터</a>
+                    <a href="#a">오픈API</a>
+                    <a href="#a">오픈소스</a>
+                    <a href="#a">D2</a>
+                    <a href="#a">데이터랩</a>
+                </div>
+            </section>
+            <!-- // footer sitemap -->
+            <!-- footer info -->
+            <section class="footer__info">
+                <h2 class="hide">사이트정보</h2>
+                <p>Copyright(c) 2020.</p>
+            </section>
+            <!-- // footer info -->
+        </div>
+        <!-- // footer bg -->
+    </footer>
+    <!-- // footer -->
+
+
+</body>

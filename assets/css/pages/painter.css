@@ -1,0 +1,124 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url(https://images.unsplash.com/photo-1532210317995-cc56d90177d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)no-repeat center / cover;
+}
+
+.sub-title {
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    font-size: 30px;
+    font-weight: 900;
+    transform: translateX(-50%);
+}
+
+.sub-title i {
+    position: relative;
+    top: -1px;
+    font-size: 24px;
+    color: #FF3B30;
+    cursor: pointer;
+}
+
+.painter__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+canvas {
+    position: relative;
+    top: 30px;
+    left: 50%;
+    border: 3px solid #333;
+    transform: translateX(-50%);
+}
+
+.canvas__tools {
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+
+.canvas__tools .control button {
+    width: 120px;
+    height: 35px;
+    position: relative;
+    background: #fff;
+    color: #333;
+    border: 3px solid #333;
+    font-weight: 900;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.canvas__tools .control button:nth-child(1) {
+    margin-right: 10px;
+}
+
+.canvas__tools .control button:hover {
+    background: #e5e6e7;
+}
+
+.canvas__tools .control h2 {
+    font-size: 16px;
+}
+
+.canvas__tools .control input[type='range'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    position: relative;
+    left: 50%;
+    width: 200px;
+    height: 16px;
+    transform: translateX(-50%);
+    background: #e5e6e7;
+    border: 3px solid #333;
+    border-radius: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.canvas__tools .colors span {
+    display: inline-block;
+    border: 3px solid #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 0;
+    margin: 0 3px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.canvas__tools .colors span:hover {
+    opacity: .8;
+}
+
+
+/* INFO DIMMED */
+
+.info__dimmed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .7);
+}
+
+.far.fa-times-circle {
+    position: fixed;
+    top: 25px;
+    right: 5vw;
+    z-index: 99999;
+    font-size: 50px;
+    color: #fff;
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>스라미</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="robots" content="noodp">
+
+    <meta name="title" content="스라미">
+    <meta name="description" content="스라미의 포폴이애욤">
+    <meta name="keywords" content="스라미, 프론트엔드, 프론트개발, 웹개발, 퍼블리셔, 퍼블리싱">
+    <meta name="author" content="스라미">
+    <meta name="content-language" content="ko">
+
+    <!-- FONTS : NANUMSQUARE -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    <!-- FONTAWESOME5 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+
+    <style>
+        main {
+            position: relative;
+            text-align: center;
+            width: 100vw;
+            height: 100vh;
+            background: url(https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80)no-repeat center / cover;
+        }
+        
+        .main__wrapper {
+            position: absolute;
+            width: 35vw;
+            height: auto;
+            top: 50%;
+            left: 50%;
+            border: 3px solid #333;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, .4);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            transform: translate(-50%, -50%);
+            padding: 20px 30px 30px 30px;
+        }
+        
+        #desc {
+            display: block;
+            position: relative;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 20px 0px;
+        }
+        
+        #question {
+            display: inline-block;
+            font-size: 30px;
+            font-weight: 900;
+        }
+        
+        form {
+            display: inline-block;
+        }
+        
+        #answer {
+            display: inline-block;
+            position: relative;
+            top: -7px;
+            width: 100px;
+            height: 50px;
+            border: 3px solid #333;
+            font-size: 30px;
+            font-weight: 900;
+            text-align: center;
+            text-indent: 0;
+            padding-top: 3px;
+            box-sizing: border-box;
+            background: #e5e6e7;
+        }
+        
+        #answer:focus {
+            background: #fff;
+        }
+        
+        #answer::placeholder {
+            font-size: 30px;
+            color: #999;
+            line-height: 110%;
+        }
+        
+        @media(max-width:768px) {
+            .main__wrapper {
+                width: 60vw;
+                height: auto;
+            }
+            #desc {
+                display: block;
+                position: relative;
+                font-size: 18px;
+                font-weight: 600;
+                padding: 20px 0px;
+            }
+            #question {
+                display: inline-block;
+                font-size: 28px;
+                font-weight: 900;
+            }
+            form {
+                display: inline-block;
+            }
+            #answer {
+                display: inline-block;
+                position: relative;
+                top: -7px;
+                width: 100px;
+                height: 45px;
+                border: 3px solid #333;
+                font-size: 28px;
+                font-weight: 900;
+                text-align: center;
+                text-indent: 0;
+                padding-top: 3px;
+                box-sizing: border-box;
+                background: #e5e6e7;
+            }
+            #answer:focus {
+                background: #fff;
+            }
+            #answer::placeholder {
+                font-size: 28px;
+                color: #999;
+                line-height: 110%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- SKIP -->
+    <a href="#a" class="skip">본문 바로가기</a>
+    <a href="#a" class="skip">검색 바로가기</a>
+    <!-- // SKIP -->
+
+    <!-- HEADER -->
+    <header>
+        <div class="wrapper">
+            <h1><a href="../index.html">A</a></h1>
+            <div class="header__spot">
+                <a onclick="location.reload(true);"><i class="fas fa-redo"></i></a>
+                <a id="header__bookmark-btn" href="#a"><i class="fas fa-bookmark" title="북마크"></i></a>
+            </div>
+        </div>
+    </header>
+    <!-- // HEADER -->
+
+    <!-- MAIN -->
+    <main>
+        <div class="main__wrapper">
+            <div id="desc">구구단 문제를 맞춰보세요 :)</div>
+            <div id="question"></div>
+            <form>
+                <input autofocus id="answer" type="text" placeholder="?">
+            </form>
+        </div>
+    </main>
+    <!-- // MAIN -->
+
+    <!-- SCRIPT -->
+    <script>
+        function multiplicaiton() {
+            const form = document.querySelector('form');
+            const question = document.querySelector('#question');
+
+            const randomNumb1 = Math.ceil(Math.random() * 9);
+            const randomNumb2 = Math.ceil(Math.random() * 9);
+
+            const rightAnswer = randomNumb1 * randomNumb2;
+
+            question.innerHTML = `${randomNumb1} X ${randomNumb2} = `;
+
+            form.addEventListener('submit', function(event) {
+
+                const answer = document.querySelector('#answer');
+                const submitAnswer = answer.value;
+                const desc = document.querySelector('#desc');
+
+                event.preventDefault();
+                console.log(submitAnswer, rightAnswer);
+
+
+                if (Number(submitAnswer) === Number(rightAnswer)) {
+                    const question = document.querySelector('#question');
+
+                    const randomNumb1 = Math.ceil(Math.random() * 9);
+                    const randomNumb2 = Math.ceil(Math.random() * 9);
+
+                    const answer = document.querySelector('#answer');
+
+                    answer.value = '';
+                    question.innerHTML = `${randomNumb1} X ${randomNumb2} = `;
+                    desc.innerText = '이번 문제도 맞춰보세요! :)'
+                    desc.style.color = '#333';
+
+                    multiplicaiton();
+                } else {
+                    desc.innerText = '다시 한번 생각해볼까요? ;('
+                    desc.style.color = 'red';
+                };
+            });
+        };
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            multiplicaiton();
+        })
+    </script>
+    <!-- // SCRIPT -->
+</body>

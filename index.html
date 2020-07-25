@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>스라미</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="robots" content="noodp">
+
+    <meta name="title" content="스라미">
+    <meta name="description" content="스라미의 포폴이애욤">
+    <meta name="keywords" content="스라미, 프론트엔드, 프론트개발, 웹개발, 퍼블리셔, 퍼블리싱">
+    <meta name="author" content="스라미">
+    <meta name="content-language" content="ko">
+
+    <!-- FONTS : NANUMSQUARE -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    <!-- FONTAWESOME5 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="./assets/css/default.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/swiper.min.css">
+
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="./assets/js/common.js"></script>
+    <script type="text/javascript" src="./assets/js/index.js"></script>
+    <script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+</head>
+
+<body>
+    <!-- SKIP -->
+    <a href="#a" class="skip">본문 바로가기</a>
+    <a href="#a" class="skip">검색 바로가기</a>
+    <!-- // SKIP -->
+
+    <!-- HEADER -->
+    <header>
+        <div class="wrapper">
+            <h1><a href="./index.html">A</a></h1>
+            <h2 class="hide">바로가기</h2>
+            <div class="header__spot">
+                <a id="header__search-btn" href="#a"><i class="fas fa-search" title="검색"></i></a>
+                <a id="header__bookmark-btn" href="./pages/bookmark.html"><i class="fas fa-bookmark" title="북마크"></i></a>
+            </div>
+
+            <input type="search" name="search" id="header__search" placeholder="검색어를 입력하세요">
+        </div>
+    </header>
+    <!-- // HEADER -->
+
+    <!-- MAIN -->
+    <main>
+        <section>
+            <!-- 구구단 -->
+            <article id="multiplication">
+                <a href="./pages/multiplication.html">
+                    <div class="pages__img">
+                        <div class="pages__desc">
+                            <p>랜덤한 구구단 문제를 제시하여 정답을 맞추면 다음 문제로 넘어가고, 틀리면 해당 문제를 다시 풀도록 합니다. HTML, CSS, JS를 하나의 문서에 모두 구현한 간단한 웹사이트입니다.</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="pages__title">
+                    <h3>구구단</h3>
+                    <span>GAME</span>
+                    <span>WEB</span>
+                    <span>JS</span>
+                </div>
+            </article>
+            <!-- 네이버 -->
+            <article id="naver">
+                <a href="./pages/naver.html">
+                    <div class="pages__img">
+                        <div class="pages__desc">
+                            <p>네이버 PC웹을 참고하여 구현한 반응형 웹페이지입니다. 간단한 동작은 자바스크립트로 구현되었습니다.</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="pages__title">
+                    <h3>NAVER</h3>
+                    <span>WEB</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                </div>
+            </article>
+            <!-- 페인터 -->
+            <article id="painter">
+                <a href="./pages/painter.html">
+                    <div class="pages__img">
+                        <div class="pages__desc">
+                            <p>자바스크립트로 구현한 그림판입니다. 브러쉬 색상과 크기를 조절하여 캔버스에 그림을 그리고, PNG로 저장할 수 있습니다.</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="pages__title">
+                    <h3>PAINTER</h3>
+                    <span>TOOL</span>
+                    <span>CANVAS</span>
+                    <span>JS</span>
+                </div>
+            </article>
+            <!-- 모멘텀 -->
+            <article id="momentum">
+                <a href="./pages/momentum.html">
+                    <div class="pages__img">
+                        <div class="pages__desc">
+                            <p>자바스크립트로 구현한 간단한 웹페이지입니다. 위치정보를 이용해 날씨 API를 제공하고, 로컬스토리지에 정보를 저장하여 제공합니다.</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="pages__title">
+                    <h3>MOMENTUM</h3>
+                    <span>TOOL</span>
+                    <span>API</span>
+                    <span>LS</span>
+                    <span>JS</span>
+                </div>
+            </article>
+            <!-- 끝말잇기 -->
+            <article id="wgame">
+                <a id="word__game">
+                    <div class="pages__img">
+                        <div class="pages__desc">
+                            <p>혼자 끝말잇기를 연습할 수 있는 자바스크립트 프롬프트 게임입니다. 제시어는 '스라미'입니다. 한글 외 문자 또는 한 글자 단어는 사용할 수 없습니다.</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="pages__title">
+                    <h3>끝말잇기</h3>
+                    <span>GAME</span>
+                    <span>JS</span>
+                    <span>PROMPT</span>
+                </div>
+            </article>
+            <!-- 테이블 -->
+            <article id="table">
+                <a href="./pages/table.html">
+                    <div class="pages__img">
+                        <div class="pages__desc">
+                            <p>&lt;TABLE&gt;을 이용한 자동차세 표 예제입니다. HTML 마크업에 촛점을 맞춰 작업된 페이지입니다.</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="pages__title">
+                    <h3>TABLE</h3>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>TABLE</span>
+                </div>
+            </article>
+
+        </section>
+    </main>
+    <!-- // MAIN -->
+
+
+</body>
